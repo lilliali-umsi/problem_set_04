@@ -84,13 +84,11 @@ print(f"\nProblem 2: {num_lines_in_file('planets.txt')}")
 
 def create_nested_list():
     nested_list = []
-    header_list = []
     path = 'planets.txt'
     file_handle = open(path)
     lines = file_handle.readlines()
-    for line in lines:
-        header_list.append(line.split(','))
-    nested_list.append(header_list[1:])
+    for line in lines[1:]:
+       nested_list.append(line.split(','))
     file_handle.close()
     return nested_list
 
