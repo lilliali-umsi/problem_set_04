@@ -129,7 +129,7 @@ def middle_planets(nested_list=planet_data):
         if float(item[4]) >200 and float(item[4]) <1500:
             middle_planets.append(item[0])
     return middle_planets
-middle_planets(planet_data)
+middle_planets()
 print(f"\nProblem 4: {middle_planets()}")
 
 # END PROBLEM 4 SOLUTION
@@ -185,4 +185,3 @@ fout = open("new_planets.txt",'w')
 
 # END PROBLEM SET
 # SI 506 2019F - Problem Set 04
-
