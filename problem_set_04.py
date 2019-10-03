@@ -185,11 +185,13 @@ for line in lines[1:]:
 #print(all_planets)
 file_handle = open("inner_planets.txt", 'w')
 file_handle.write(f"{all_planets}")
+fin.close()
+file_handle.close()
 fout = open("new_planets.txt",'w')
 for line in all_planets:
     #print(string_from_list(line))
     fout.write(string_from_list(line))
-
+fout.close()
 # END PROBLEM 6 SOLUTION
 
 # END PROBLEM SET
