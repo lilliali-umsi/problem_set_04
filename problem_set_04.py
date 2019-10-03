@@ -150,11 +150,11 @@ print(f"\nProblem 4: {middle_planets()}")
 
 # BEGIN PROBLEM 5 SOLUTION
 
-def string_from_list():
-    pass
+def string_from_list(list):
+    return ','.join(list) + '\n'
 
 
-print(f"\nProblem 5: {string_from_list()}")
+print(f"\nProblem 5: {string_from_list(planet_data[0])}")
 
 # END PROBLEM 5 SOLUTION
 
