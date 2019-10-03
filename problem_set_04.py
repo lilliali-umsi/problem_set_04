@@ -82,9 +82,9 @@ print(f"\nProblem 2: {num_lines_in_file('planets.txt')}")
 
 # BEGIN PROBLEM 3 SOLUTION
 
-def create_nested_list():
+def create_nested_list(file='planets.txt'):
     nested_list = []
-    path = 'planets.txt'
+    path = file
     file_handle = open(path)
     lines = file_handle.readlines()
     for line in lines[1:]:
