@@ -123,9 +123,13 @@ print(f"\nProblem 3:\n {planet_data}")
 
 # BEGIN PROBLEM 4 SOLUTION
 
-def middle_planets():
-    pass
-
+def middle_planets(nested_list=planet_data):
+    middle_planets =[]
+    for item in planet_data:
+        if float(item[4]) >200 and float(item[4]) <1500:
+            middle_planets.append("<" + item[0] + ">")
+    return middle_planets
+middle_planets(planet_data)
 print(f"\nProblem 4: {middle_planets()}")
 
 # END PROBLEM 4 SOLUTION
