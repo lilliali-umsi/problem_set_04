@@ -51,10 +51,15 @@ print(f"\nProblem 1: {num_chars_in_file('planets.txt')}")
 
 # BEGIN PROBLEM 2 SOLUTION
 
-def num_lines_in_file():
-    pass
+def num_lines_in_file(file_name):
+    path = file_name
+    file_handle = open(path)
+    count = 0
+    for line in file_handle:
+        count = count + 1
+    return count
 
-print(f"\nProblem 2: {num_lines_in_file()}")
+print(f"\nProblem 2: {num_lines_in_file('planets.txt')}")
 
 # END PROBLEM 2 SOLUTION
 
