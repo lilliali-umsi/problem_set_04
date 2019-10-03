@@ -36,7 +36,7 @@ def num_chars_in_file(file_name):
     file_handle = open(path)
     file = file_handle.read()
     return len(file)
-
+    file_handle.close()
 print(f"\nProblem 1: {num_chars_in_file('planets.txt')}")
 
 # END PROBLEM 1 SOLUTION
@@ -58,7 +58,7 @@ def num_lines_in_file(file_name):
     for line in file_handle:
         count = count + 1
     return count
-
+    file_handle.close()
 print(f"\nProblem 2: {num_lines_in_file('planets.txt')}")
 
 # END PROBLEM 2 SOLUTION
@@ -83,9 +83,23 @@ print(f"\nProblem 2: {num_lines_in_file('planets.txt')}")
 # BEGIN PROBLEM 3 SOLUTION
 
 def create_nested_list():
-    pass
+    nested_list = []
+    header_list = []
+    path = 'planets.txt'
+    file_handle = open(path)
+    lines = file_handle.readlines()
+    for line in lines:
+        header_list.append(line.split(','))
+    nested_list.append(header_list[1:])
+    file_handle.close()
+    return nested_list
 
-planet_data = None
+
+    #for line in file_handle:
+        #line.split(',')
+
+
+planet_data = create_nested_list()
 
 print(f"\nProblem 3:\n {planet_data}")
 
