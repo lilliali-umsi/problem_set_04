@@ -177,10 +177,18 @@ print(f"\nProblem 5: {string_from_list(planet_data[0])}")
 # pass it to the function 'string_from_list'
 
 # BEGIN PROBLEM 6 SOLUTION
-
+all_planets = []
 fin = open("planets.txt",'r')
+lines = fin.readlines()
+for line in lines[1:]:
+    all_planets.append(line.split(',')[0:3])
+#print(all_planets)
+file_handle = open("inner_planets.txt", 'w')
+file_handle.write(f"{all_planets}")
 fout = open("new_planets.txt",'w')
-
+for line in all_planets:
+    #print(string_from_list(line))
+    fout.write(string_from_list(line))
 
 # END PROBLEM 6 SOLUTION
 
